@@ -1,0 +1,26 @@
+name: CI Pipeline  # Nombre del workflow
+
+on: 
+  push:  # Se ejecuta al hacer push en estas ramas
+    branches: [main, develop]
+  pull_request:  # También en los pull requests a estas ramas
+    branches: [main, develop]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Sistema operativo de ejecución
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar pruebas
+        run: npm test
