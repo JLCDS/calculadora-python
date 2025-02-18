@@ -18,4 +18,7 @@ while not fin:
         resta1 = int (input ("ingrese el primer numero: "))
         resta2 = int (input ("ingrese el segundo numero: "))
         print ("la resta es: ", resta1 - resta2)
-   
+    elif (option == 3):
+        multi1 = int (input ("ingrese el primer numero: "))
+        multi2 = int (input ("ingrese el segundo numero: "))
+        print ("la multiplicacion es: ", multi1 * multi2) 
