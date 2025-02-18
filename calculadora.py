@@ -18,3 +18,4 @@ while not fin:
         resta1 = int (input ("ingrese el primer numero: "))
         resta2 = int (input ("ingrese el segundo numero: "))
         print ("la resta es: ", resta1 - resta2)
+   
