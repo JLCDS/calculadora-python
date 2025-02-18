@@ -1,26 +1,22 @@
-name: CI Pipeline  # Nombre del workflow
+name: Pytest Tests
 
-on: 
-  push:  # Se ejecuta al hacer push en estas ramas
-    branches: [main, develop]
-  pull_request:  # También en los pull requests a estas ramas
-    branches: [main, develop]
+on: [push, pull_request]
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Sistema operativo de ejecución
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout del código
         uses: actions/checkout@v3
 
-      - name: Configurar Node.js
-        uses: actions/setup-node@v3
+      - name: Configurar Python
+        uses: actions/setup-python@v3
         with:
-          node-version: '18'
+          python-version: '3.10'
 
       - name: Instalar dependencias
-        run: npm install
+        run: pip install -r requirements.txt || true  # Instala si hay un requirements.txt
 
-      - name: Ejecutar pruebas
-        run: npm test
+      - name: Ejecutar pruebas con Pytest
+        run: pytest
