@@ -14,3 +14,7 @@ while not fin:
         suma1 = int (input ("ingrese el primer numero: "))
         suma2 = int (input ("ingrese el segundo numero: "))
         print ("la suma es: ", suma1 + suma2)
+    elif (option == 2):
+        resta1 = int (input ("ingrese el primer numero: "))
+        resta2 = int (input ("ingrese el segundo numero: "))
+        print ("la resta es: ", resta1 - resta2)
