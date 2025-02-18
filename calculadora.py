@@ -22,9 +22,3 @@ while not fin:
         multi1 = int (input ("ingrese el primer numero: "))
         multi2 = int (input ("ingrese el segundo numero: "))
         print ("la multiplicacion es: ", multi1 * multi2) 
-    elif (option == 4):
-        div1 = int (input ("ingrese el primer numero: "))
-        div2 = int (input ("ingrese el segundo numero: "))
-        print ("la division es: ", div1 / div2)
-    elif (option == 5):
-        fin = True
